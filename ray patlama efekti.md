@@ -1,12 +1,12 @@
 # ÜZERİNDE TIKLANAN Z YÖNLÜ RAY
-private Rigidbody rigidbody;
+	private Rigidbody rigidbody;
 
-void Start(){ rigidbody = GetComponent<Rigidbody>();}
+	void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
-public float force;      
+	public float force;      
 
-private void OnMouseDown()
-{
+	private void OnMouseDown()
+	{
 	
 	// Create a ray from the transform position along the transform's z-axis
        
@@ -14,7 +14,7 @@ private void OnMouseDown()
         
 	rigidbody.AddForce(ray.direction, ForceMode.Impulse);//HEMEN KUVVETİ ANİ PATLAMA ÇARPMA EFEKTİ
     
-}
+	}
 
 
 # ÜZERİNDE TIKLANAN YERDEN RAY

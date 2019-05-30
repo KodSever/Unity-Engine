@@ -98,8 +98,10 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
         }
     }
 # NORMAL PATLAMA EFEKTİ
-public float force,radius=5;    
+public float force, radius=5;    
+
 private Rigidbody rigidbody;
+
 void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
     private void Update()

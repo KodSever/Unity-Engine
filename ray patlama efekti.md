@@ -169,9 +169,9 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
     }
     
 # RAY ATEŞ ETME(CLONE)
-public GameObject particle;
+	public GameObject particle;
 
-void Update(){
+	void Update(){
     
         if (Input.GetButtonDown("Fire1")){
 	

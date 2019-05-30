@@ -4,8 +4,10 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
 public float force;      
 
-private void OnMouseDown(){// Create a ray from the transform position along the transform's z-axis
-        
+private void OnMouseDown()
+{
+	// Create a ray from the transform position along the transform's z-axis
+       
 	Ray ray = new Ray(transform.position, transform.forward*force);
         
 	rigidbody.AddForce(ray.direction, ForceMode.Impulse);//HEMEN KUVVETİ ANİ PATLAMA ÇARPMA EFEKTİ

@@ -1,5 +1,6 @@
 # ÜZERİNDE TIKLANAN Z YÖNLÜ RAY
 private Rigidbody rigidbody;
+
 void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
 public float force;      
@@ -17,19 +18,26 @@ private void OnMouseDown()
 
 # ÜZERİNDE TIKLANAN YERDEN RAY
 private Rigidbody rigidbody;
+
 void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
-public float force;           
+public float force;         
+
 private void OnMouseDown(){
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+	
         RaycastHit hit;
+	
         if (Physics.Raycast(ray,out hit, 100))
         {
             //rigidbody.AddForceAtPosition(new Vector3(0, 0, force), hit.point,ForceMode.Impulse);//DÜZ İLERLER
+	    
 rigidbody.AddForceAtPosition((transform.position-hit.point)*force, hit.point,ForceMode.Impulse); //TIKLANDIĞI YERDEN İLER
 
         }      
     }
+    
 # HER YERDEN TIKLAMA RAY ADDEXPLOSION
 
 public float force;           

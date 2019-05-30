@@ -18,13 +18,13 @@ private void OnMouseDown()
 
 
 # ÜZERİNDE TIKLANAN YERDEN RAY
-private Rigidbody rigidbody;
+	private Rigidbody rigidbody;
 
-void Start(){ rigidbody = GetComponent<Rigidbody>();}
+	void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
-public float force;         
+	public float force;         
 
-private void OnMouseDown(){
+	private void OnMouseDown(){
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 	

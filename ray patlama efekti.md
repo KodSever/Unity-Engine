@@ -125,11 +125,11 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
     }
 
 # İSTENEN DOĞRULTUDA PATLAMA EFEKTİ
-public float force,radius=5; //radius düşürürsen daha az etki eder
+    public float force,radius=5; //radius düşürürsen daha az etki eder
 
-private Rigidbody rigidbody;
+    private Rigidbody rigidbody;
 
-void Start(){ rigidbody = GetComponent<Rigidbody>();}
+    void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
     private void Update()
     {

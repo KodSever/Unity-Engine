@@ -8,7 +8,7 @@
 	private void OnMouseDown()
 	{
 
-            // Create a ray from the transform position along the transform's z-axis
+            //Create a ray from the transform position along the transform's z-axis
        
 	    Ray ray = new Ray(transform.position, transform.forward*force);
         
@@ -51,19 +51,19 @@
 
 	private void Update(){
 
-        	if (Input.GetMouseButtonDown(0)){  //HER YERDEN TIKLAMA
+            if (Input.GetMouseButtonDown(0)){  //HER YERDEN TIKLAMA
 	
-            	Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 	    
-            	RaycastHit hit;
+            RaycastHit hit;
 	    
-            	if (Physics.Raycast(ray, out hit, 100)){
+            if (Physics.Raycast(ray, out hit, 100)){
 	    
-                	rigidbody.AddExplosionForce(force, hit.point, 5, 0, ForceMode.Impulse);
+               	rigidbody.AddExplosionForce(force, hit.point, 5, 0, ForceMode.Impulse);
 		
-  			//rigidbody.AddExplosionForce(force, hit.point, 5, 1, ForceMode.Impulse);//PATLAMA YERDEN OLUYOR
+  		//rigidbody.AddExplosionForce(force, hit.point, 5, 1, ForceMode.Impulse);//PATLAMA YERDEN OLUYOR
 		
-            	}
+            }
          }
     }
 # YERDEN PATLAMA EFEKTİ
@@ -76,27 +76,27 @@
   	private void Update()
     	{
     
-        	if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
 		
-        	{
+            {
 	
-            		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            	Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 	    
-            		RaycastHit hit;
+            	RaycastHit hit;
 	    
-            		if (Physics.Raycast(ray, out hit, 100))
-            		{
-                		Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
-                		foreach (Collider c in colliders)
-                		{
-                    			Rigidbody r = c.GetComponent<Rigidbody>();
-                    			if (r == null) continue;
-                    			r.AddExplosionForce(force, hit.point, radius, 1, ForceMode.Impulse);
-					//0 OLURSA NORMAL PATLAMA 1 OLURSA YERDEN PATLAMA EFEKTİ OLUR
-				}
+            	if (Physics.Raycast(ray, out hit, 100))
+            	{
+            	    Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
+                    foreach (Collider c in colliders)
+                    {
+                    	Rigidbody r = c.GetComponent<Rigidbody>();
+                    	if (r == null) continue;
+                    	r.AddExplosionForce(force, hit.point, radius, 1, ForceMode.Impulse);
+			//0 OLURSA NORMAL PATLAMA 1 OLURSA YERDEN PATLAMA EFEKTİ OLUR
+		    }
 
-           	 	}
-        	}
+           	 }
+            }
     	}
 # NORMAL PATLAMA EFEKTİ
      public float force, radius=5;    

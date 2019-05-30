@@ -98,31 +98,31 @@
         }
     }
 # NORMAL PATLAMA EFEKTİ
-public float force, radius=5;    
+	public float force, radius=5;    
 
-private Rigidbody rigidbody;
+	private Rigidbody rigidbody;
 
-void Start(){ rigidbody = GetComponent<Rigidbody>();}
+	void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
-                foreach (Collider c in colliders)
-                {
-                    Rigidbody r = c.GetComponent<Rigidbody>();
-                    if (r == null) continue;
-                    r.AddExplosionForce(force, hit.point, radius, 0, ForceMode.Impulse);
-			  //0 OLURSA NORMAL PATLAMA 1 OLURSA YERDEN PATLAMA EFEKTİ OLUR
-                }
-            }
-        }
-    }
+    	private void Update()
+    	{
+        	if (Input.GetMouseButtonDown(0))
+        	{
+           		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            		RaycastHit hit;
+            		if (Physics.Raycast(ray, out hit, 100))
+            		{
+               			Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
+                		foreach (Collider c in colliders)
+                		{
+                    			Rigidbody r = c.GetComponent<Rigidbody>();
+                    			if (r == null) continue;
+                    			r.AddExplosionForce(force, hit.point, radius, 0, ForceMode.Impulse);
+			  		//0 OLURSA NORMAL PATLAMA 1 OLURSA YERDEN PATLAMA EFEKTİ OLUR
+                		}
+            		}
+        	}
+    	}
 
 # İSTENEN DOĞRULTUDA PATLAMA EFEKTİ
     public float force,radius=5; //radius düşürürsen daha az etki eder

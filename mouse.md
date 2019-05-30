@@ -4,7 +4,8 @@ if (Input.GetMouseButtonDown(0))
     
     RaycastHit hitInfo = new RaycastHit();
    
-    if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo) && hitInfo.transform.tag == "Construction"){
+    if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo) && 
+    hitInfo.transform.tag == "Construction"){
     print ("It's working");
     }
 
@@ -12,11 +13,17 @@ if (Input.GetMouseButtonDown(0))
 
 # FARE BASILIRSA
 public GameObject particle;
+
     void Update(){
+    
         if (Input.GetButtonDown("Fire1")){
+       
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            
             if (Physics.Raycast(ray)) Instantiate(particle, transform.position, transform.rotation);
+            
         }
+        
     }
 
 

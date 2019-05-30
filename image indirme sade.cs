@@ -1,4 +1,4 @@
-# Dosyayı Texture Olarak Yükle
+//Dosyayı Texture Olarak Yükle
     void enumDosyadanYukle(string path = @"D:\fatman\texture.png")
     {
     
@@ -15,7 +15,7 @@
             image.GetComponent<RawImage>().texture = texture;
         }
     }
-# Texture Olarak Kaydetme
+//Texture Olarak Kaydetme
     IEnumerator enumIndirYukle()
     {
         string path = @"D:\fatman\texture.png";

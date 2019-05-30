@@ -126,7 +126,9 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
 # İSTENEN DOĞRULTUDA PATLAMA EFEKTİ
 public float force,radius=5; //radius düşürürsen daha az etki eder
+
 private Rigidbody rigidbody;
+
 void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
     private void Update()
@@ -134,7 +136,9 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+	    
             RaycastHit hit;
+	    
             if (Physics.Raycast(ray, out hit, 100))
             {
                 Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
@@ -149,11 +153,13 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
     }
 # İSTENEN KONUMLU PATLATMA
     public Vector3 location = new Vector3(0, 0, -6);
+    
     void Start() { Invoke("Detonate", 3); }
     
     private void Detonate()
     {
         Collider[] colliders = Physics.OverlapSphere(location, 10);
+	
         foreach (Collider c in colliders)
         {
             Rigidbody r = c.GetComponent<Rigidbody>();
@@ -164,12 +170,17 @@ void Start(){ rigidbody = GetComponent<Rigidbody>();}
     
 # RAY ATEŞ ETME(CLONE)
 public GameObject particle;
+
     void Update(){
+    
         if (Input.GetButtonDown("Fire1")){
+	
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray))
-                Instantiate(particle, transform.position, transform.rotation);
+	    
+            if (Physics.Raycast(ray)) Instantiate(particle, transform.position, transform.rotation);
+	    
         }
+	
     }
 
 	

@@ -31,11 +31,13 @@ private void OnMouseDown(){
 	
         if (Physics.Raycast(ray,out hit, 100))
         {
-            //rigidbody.AddForceAtPosition(new Vector3(0, 0, force), hit.point,ForceMode.Impulse);//DÜZ İLERLER
+            	
+		//rigidbody.AddForceAtPosition(new Vector3(0, 0, force), hit.point,ForceMode.Impulse);//DÜZ İLERLER
 	    
-rigidbody.AddForceAtPosition((transform.position-hit.point)*force, hit.point,ForceMode.Impulse); //TIKLANDIĞI YERDEN İLER
+		rigidbody.AddForceAtPosition((transform.position-hit.point)*force, hit.point,ForceMode.Impulse); //TIKLANDIĞI YERDEN İLER
 
-        }      
+        }    
+	
     }
     
 # HER YERDEN TIKLAMA RAY ADDEXPLOSION

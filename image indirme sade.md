@@ -1,6 +1,7 @@
 # Dosyayı Texture Olarak Yükle
 void enumDosyadanYukle(string path = @"D:\fatman\texture.png")
     {
+    
         Texture2D texture = new Texture2D(2, 2);
         
         GameObject image = GameObject.Find("RawImage");

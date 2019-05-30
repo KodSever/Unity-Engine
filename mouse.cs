@@ -1,12 +1,11 @@
 // Sample
 if (Input.GetMouseButtonDown(0))
 {
-    
-    RaycastHit hitInfo = new RaycastHit();
-   
+    RaycastHit hitInfo = new RaycastHit();  
     if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo) && 
-    hitInfo.transform.tag == "Construction"){
-    print ("It's working");
+    hitInfo.transform.tag == "Construction")
+    {
+        print ("It's working");
     }
 
 }

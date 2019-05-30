@@ -1,4 +1,4 @@
-# ÇOCUKLARINI BULMA SADE
+//ÇOCUKLARINI BULMA SADE
 
     Transform[] allChildren = nesne1.GetComponentsInChildren<Transform>();
     
@@ -8,7 +8,7 @@
         Debug.Log(obj);
     }
 
-# ÇOCUKLARINI BULMA KARMASIK
+//ÇOCUKLARINI BULMA KARMASIK
 
     #region ÇOCUKLAR
     public Transform[] getCocuklarTransform(GameObject nesne)

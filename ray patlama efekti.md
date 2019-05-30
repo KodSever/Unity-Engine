@@ -64,7 +64,7 @@
   			//rigidbody.AddExplosionForce(force, hit.point, 5, 1, ForceMode.Impulse);//PATLAMA YERDEN OLUYOR
 		
             	}
-        }
+         }
     }
 # YERDEN PATLAMA EFEKTİ
 	public float force,radius=5;    

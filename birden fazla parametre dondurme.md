@@ -1,8 +1,11 @@
 #BİRDEN FAZLA PARAMETRE YAPIMI   
     public Tuple<int[], int> getDizi(int[] dizi, int arama)
+    
     {
+    
         var tuple = new Tuple<int[], int>(dizi,arama);
         return tuple;
+        
     }
     
 # TUPLE ERİŞİM

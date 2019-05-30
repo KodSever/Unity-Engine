@@ -1,10 +1,14 @@
 IEnumerator enumWWW()
     {
+    
         WWW www = new WWW("file:///D://SampleImage.png");
-        while (!www.isDone)
-            yield return null;
+        
+        while (!www.isDone) yield return null;
+            
         GameObject image = GameObject.Find("RawImage");
+        
         image.GetComponent<RawImage>().texture = www.texture;
+        
     }
 
     IEnumerator enumWeb()

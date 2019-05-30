@@ -99,15 +99,15 @@
         	}
     	}
 # NORMAL PATLAMA EFEKTİ
-public float force, radius=5;    
+	public float force, radius=5;    
 
-private Rigidbody rigidbody;
+	private Rigidbody rigidbody;
 
-void Start(){ rigidbody = GetComponent<Rigidbody>();}
-private void Update()
-{
-    	if (Input.GetMouseButtonDown(0))
-    	{
+	void Start(){ rigidbody = GetComponent<Rigidbody>();}
+	private void Update()
+	{
+    		if (Input.GetMouseButtonDown(0))
+    		{
        		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         	RaycastHit hit;
         	if (Physics.Raycast(ray, out hit, 100))

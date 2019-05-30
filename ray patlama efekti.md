@@ -7,6 +7,7 @@ public float force;
 
 private void OnMouseDown()
 {
+	
 	// Create a ray from the transform position along the transform's z-axis
        
 	Ray ray = new Ray(transform.position, transform.forward*force);
@@ -42,31 +43,46 @@ private void OnMouseDown(){
     
 # HER YERDEN TIKLAMA RAY ADDEXPLOSION
 
-public float force;           
+public float force;
+
 private Rigidbody rigidbody;
+
 void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
 private void Update(){
+
         if (Input.GetMouseButtonDown(0)){  //HER YERDEN TIKLAMA
+	
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+	    
             RaycastHit hit;
+	    
             if (Physics.Raycast(ray, out hit, 100)){
+	    
                 rigidbody.AddExplosionForce(force, hit.point, 5, 0, ForceMode.Impulse);
-  //rigidbody.AddExplosionForce(force, hit.point, 5, 1, ForceMode.Impulse);//PATLAMA YERDEN OLUYOR
+		
+  		//rigidbody.AddExplosionForce(force, hit.point, 5, 1, ForceMode.Impulse);//PATLAMA YERDEN OLUYOR
+		
             }
         }
     }
 # YERDEN PATLAMA EFEKTİ
 public float force,radius=5;    
+
 private Rigidbody rigidbody;
+
 void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
     private void Update()
     {
+    
         if (Input.GetMouseButtonDown(0))
         {
+	
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+	    
             RaycastHit hit;
+	    
             if (Physics.Raycast(ray, out hit, 100))
             {
                 Collider[] colliders = Physics.OverlapSphere(hit.point,radius);

@@ -1,4 +1,4 @@
-# Sample
+// Sample
 if (Input.GetMouseButtonDown(0))
 {
     
@@ -11,7 +11,7 @@ if (Input.GetMouseButtonDown(0))
 
 }
 
-# FARE BASILIRSA
+// FARE BASILIRSA
 public GameObject particle;
 
     void Update(){
@@ -27,7 +27,7 @@ public GameObject particle;
     }
 
 
-# FAREYLE ÜZERİNE TIKLANINCA
+// FAREYLE ÜZERİNE TIKLANINCA
     private Rigidbody rigidbody;
     void Start(){ rigidbody = GetComponent<Rigidbody>();}
 
@@ -46,9 +46,8 @@ public GameObject particle;
         rigidbody.AddForce(new Vector3(0, 0, force), ForceMode.Acceleration);//KÜTLEYİ ÖNEMSEMİYOR
     }
 
-# FAREYLE SOLA BASILIRSA
+// FAREYLE SOLA BASILIRSA
 if (Input.GetMouseButtonDown(0)){}
 
-
-# FARE KONUMU
+// FARE KONUMU
 Input.mousePosition

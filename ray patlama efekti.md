@@ -83,20 +83,20 @@
 	    
             		RaycastHit hit;
 	    
-            	if (Physics.Raycast(ray, out hit, 100))
-            	{
-                	Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
-                	foreach (Collider c in colliders)
-                	{
-                    		Rigidbody r = c.GetComponent<Rigidbody>();
-                    		if (r == null) continue;
-                    		r.AddExplosionForce(force, hit.point, radius, 1, ForceMode.Impulse);
-				//0 OLURSA NORMAL PATLAMA 1 OLURSA YERDEN PATLAMA EFEKTİ OLUR
-			}
+            		if (Physics.Raycast(ray, out hit, 100))
+            		{
+                		Collider[] colliders = Physics.OverlapSphere(hit.point,radius);
+                		foreach (Collider c in colliders)
+                		{
+                    			Rigidbody r = c.GetComponent<Rigidbody>();
+                    			if (r == null) continue;
+                    			r.AddExplosionForce(force, hit.point, radius, 1, ForceMode.Impulse);
+					//0 OLURSA NORMAL PATLAMA 1 OLURSA YERDEN PATLAMA EFEKTİ OLUR
+				}
 
-           	 }
-        }
-    }
+           	 	}
+        	}
+    	}
 # NORMAL PATLAMA EFEKTİ
 	public float force, radius=5;    
 
